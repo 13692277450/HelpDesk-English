@@ -1,0 +1,3954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManagerWindow</class>
+ <widget class="QMainWindow" name="ManagerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1708</width>
+    <height>827</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Super HelpDesk Ver 2.0  ---- Manager Console</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ResourceFile.qrc">
+    <normaloff>:/Icon/bird2.png</normaloff>:/Icon/bird2.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget::ManagerWindow
+{
+font-family:  &quot;Microsoft YaHei UI&quot;;
+font:12pt;
+font-size: 12pt;
+}
+QLabel
+{
+font-family:  &quot;Microsoft YaHei UI&quot;;
+
+font:12pt;
+font-size:12t;
+}
+
+QLineEdit 
+{
+     border: 1px solid blue;
+     border-radius:5px;
+padding: 1px;
+font-size: 12pt;   
+}
+ 
+ QLineEdit:hover
+{
+	color: rgb(57, 57, 57);
+}
+ 
+
+
+ 
+QPushButton
+{
+  
+    border-style:none;
+border-radius:5px;
+padding:5px;
+color:#000000;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #E1E4E6,stop:1 #CCD3D9);
+	
+	selection-background-color: rgb(111, 111, 111);
+}
+ 
+QPushButton:hover{
+	
+	
+	
+	color: rgb(202, 197, 248);
+	
+	
+	background-color: rgb(99, 99, 99);
+}
+
+QPushButton:pressed{
+	
+	
+	
+	color: rgb(189, 189, 230);
+	background-color: rgb(140, 143, 162);
+}
+
+
+
+QComboBox::drop-down:hover:pressed
+
+{//下拉按钮设置
+
+       subcontrol-position:center right;//按钮位置
+
+  //     image:url(:/qss/image/angle-down.png);
+//按钮图片
+
+}
+
+QComboBox:drop-down
+
+{
+
+       subcontrol-position:center right;
+
+    //   image:url(:/qss/image/angle-down-//l-16.png);
+
+}
+
+QComboBox
+
+{// QComboBox本身属性设置
+
+       border: 1px solid #CCCCCC;
+       border-radius: 5px;
+	   font:12pt;
+	   font-size:12pt;
+
+}
+
+QComboBox::hover
+
+{//鼠标移上去，边框变蓝色
+
+       /* 边框宽度,线条样式,颜色 */ 
+
+    border:1px solid #2080F7;  
+
+    /* 内边框 */ 
+
+    padding:1px 18px 1px 3px; 
+
+    min-width:100px; 
+
+       font:12px; 
+
+}
+
+QComboBox QAbstractItemView
+
+{//下拉列表中的选项设置
+
+      border: 1px solid #2080F7;
+
+      selection-//选中背景色
+
+}
+
+/*水平滚动条*/
+
+QScrollBar:horizontal{
+
+       width:8px; 
+
+       padding-top:0px;
+
+       padding-bottom:0px;
+
+       padding-right:0px;
+
+       padding-left:0px;
+
+       background: #000000;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:horizontal{
+
+       background:#E5E5E5;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       min-height:20px;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:horizontal:normal{
+
+       background:#F5F5F5;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:horizontal:hover{
+
+       background:#E6E6E6;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:horizontal:pressed{
+
+       background:#CCCCCC;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}   
+
+ 
+
+ 
+
+QScrollBar滚动条属性设置
+
+/*垂直滚动条*/
+
+ 
+
+QScrollBar:vertical
+
+{
+
+       width:8px;  //宽度
+
+       padding-top:4px; //内上边距设置
+
+       padding-bottom:0px;
+
+       padding-right:0px;
+
+       padding-left:0px;
+
+       background: #000000;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:vertical{ //滑块属性设置
+
+       background:#E5E5E5;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       min-height:20px;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:vertical:normal{
+
+       background:#F5F5F5;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar::handle:vertical:hover{
+
+       background:#E6E6E6;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:vertical:pressed{
+
+       background:#CCCCCC;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar{
+
+background: #000000;
+
+}
+
+QScrollBar:pressed
+
+{
+
+       background: #000000;
+
+}
+
+TableWidget#tableWidget:Item
+
+{
+
+       border:0px solid #E5E5E5;
+
+       border-bottom:1px solid #E5E5E5;
+
+       font-size: 12px;
+
+       color: #4C4C4C;
+
+       font - family: Microsoft YaHei;
+
+       alternate- /*行交替颜色*/ 
+
+    selection-background-color: #E9F2FE; /*选中行背景颜色*/
+
+}
+
+QTableWidget#tableWidget:Item:selected
+
+{
+
+       background:#4C99F8;
+
+}
+
+
+QHeaderView:section{
+
+       font-size: 12px;
+
+       color: #000000;
+
+       font - family: Microsoft YaHei;
+
+       font-weight: bold;
+
+       height:36px;/*表头高度*/
+
+       border-style: flat;
+
+      
+
+       border-bottom:1px solid #E5E5E5;
+
+       border-top:0px solid #E5E5E5;
+
+       alignment: left;//左对齐
+
+}
+
+QMenu:separator {
+    height: 1px;
+    background: rgb(227, 227, 227);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+QPlainTextEdit{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+QTableView{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>48</width>
+    <height>48</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_35">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <widget class="QWidget" name="page_InitalData_Chart">
+       <layout class="QGridLayout" name="gridLayout_12">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_MonitorWindow">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Mornitor Window</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_13">
+           <item row="1" column="1">
+            <widget class="QChartView" name="graphicsView_Monthly_Cases">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QChartView" name="graphicsView_Sort_Cases_Type"/>
+           </item>
+           <item row="1" column="3">
+            <widget class="QChartView" name="graphicsView_Yearly_Cases"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QChartView" name="graphicsView_Engineer_OpenCases"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QChartView" name="graphicsView_Last_Month_Cases"/>
+           </item>
+           <item row="0" column="3">
+            <widget class="QChartView" name="graphicsView_All_Cases"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QChartView" name="graphicsView_Engineer_HoldCases"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QChartView" name="graphicsView_All_Cases_By_Dept">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_Chat">
+       <layout class="QGridLayout" name="gridLayout_29">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_16">
+          <property name="styleSheet">
+           <string notr="true">QTableView{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+QPlainTextEdit{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+</string>
+          </property>
+          <property name="title">
+           <string>Chat Window</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_31">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QWidget" name="widget_5" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_30">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QWidget" name="widget_4" native="true">
+                    <property name="minimumSize">
+                     <size>
+                      <width>600</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_8">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QWidget" name="widget" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_6">
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QListView" name="listView">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>80</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QListView{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <layout class="QHBoxLayout" name="horizontalLayout_6">
+                          <item>
+                           <widget class="QLabel" name="label_35">
+                            <property name="text">
+                             <string>Messages:</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="horizontalSpacer_6">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                             <enum>QSizePolicy::Fixed</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>230</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_36">
+                            <property name="minimumSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>25</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="pixmap">
+                             <pixmap resource="ResourceFile.qrc">:/Icon/checkUser.png</pixmap>
+                            </property>
+                            <property name="scaledContents">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ChatWith">
+                            <property name="font">
+                             <font>
+                              <family>Microsoft YaHei UI</family>
+                              <pointsize>12</pointsize>
+                              <italic>false</italic>
+                              <bold>false</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Chat With:</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ChatWithName">
+                            <property name="font">
+                             <font>
+                              <family>Microsoft YaHei UI</family>
+                              <pointsize>12</pointsize>
+                              <italic>false</italic>
+                              <bold>false</bold>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(72, 81, 204);</string>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                        <item>
+                         <widget class="QPlainTextEdit" name="plainTextEdit_Chat_Messages">
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QListView{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QWidget" name="widget_2" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_7">
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QLabel" name="label_37">
+                          <property name="text">
+                           <string>Send Messages:</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPlainTextEdit" name="plainTextEdit_Send_Messages">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <layout class="QHBoxLayout" name="horizontalLayout_7">
+                          <item>
+                           <widget class="QPushButton" name="pushButton_Chat_SendMessage">
+                            <property name="text">
+                             <string> SEND MESSAGE</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="ResourceFile.qrc">
+                              <normaloff>:/Icon/sendmessage.png</normaloff>:/Icon/sendmessage.png</iconset>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="pushButton_Chat_UpdateIP">
+                            <property name="maximumSize">
+                             <size>
+                              <width>120</width>
+                              <height>16777215</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string> UPDATE IP</string>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="ResourceFile.qrc">
+                              <normaloff>:/Icon/addressbook.png</normaloff>:/Icon/addressbook.png</iconset>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QComboBox" name="comboBox_Chat_UpdateIP">
+                            <property name="maximumSize">
+                             <size>
+                              <width>120</width>
+                              <height>16777215</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_3" native="true">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_11">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_9">
+                       <item>
+                        <widget class="QLabel" name="label_38">
+                         <property name="text">
+                          <string>Contact Lists:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QTableView" name="tableView_HelpDesk_Contact">
+                         <property name="maximumSize">
+                          <size>
+                           <width>240</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QTableView{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+</string>
+                         </property>
+                         <property name="sizeAdjustPolicy">
+                          <enum>QAbstractScrollArea::AdjustToContents</enum>
+                         </property>
+                         <property name="selectionMode">
+                          <enum>QAbstractItemView::SingleSelection</enum>
+                         </property>
+                         <property name="textElideMode">
+                          <enum>Qt::ElideNone</enum>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_8">
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_Chat_Search">
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_Chat_Search">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="text">
+                            <string>SEARCH</string>
+                           </property>
+                           <property name="icon">
+                            <iconset resource="ResourceFile.qrc">
+                             <normaloff>:/Icon/search2.png</normaloff>:/Icon/search2.png</iconset>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_Chat_RefreshList">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="text">
+                          <string> REFRESH LIST</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="ResourceFile.qrc">
+                           <normaloff>:/Icon/open.png</normaloff>:/Icon/open.png</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_6" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_10">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_39">
+                  <property name="maximumSize">
+                   <size>
+                    <width>250</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>New Cases Today:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTableView" name="tableView_Cases_Today">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QHeaderView::section {
+font: 12px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+	color: rgb(120, 125, 202);
+border: 1px solid #e2e2e2;
+background-color: rgb(242, 255, 253);
+}
+ 
+QTableView{
+font: 10pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+
+QPlainTextEdit{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+QTableView{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+</string>
+                  </property>
+                  <property name="verticalScrollBarPolicy">
+                   <enum>Qt::ScrollBarAlwaysOn</enum>
+                  </property>
+                  <property name="horizontalScrollBarPolicy">
+                   <enum>Qt::ScrollBarAlwaysOn</enum>
+                  </property>
+                  <property name="sizeAdjustPolicy">
+                   <enum>QAbstractScrollArea::AdjustToContents</enum>
+                  </property>
+                  <property name="textElideMode">
+                   <enum>Qt::ElideNone</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_Chat_Refresh_CasesToday">
+                  <property name="text">
+                   <string>REF RESH LIST</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="ResourceFile.qrc">
+                    <normaloff>:/Icon/open.png</normaloff>:/Icon/open.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_7" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_12">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_40">
+                  <property name="text">
+                   <string>System Log:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="plainTextEdit_3">
+                  <property name="styleSheet">
+                   <string notr="true">QTableView{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+QPlainTextEdit{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_All_My_Cases">
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+font: 16px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color: rgb(204, 238, 220);
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_15">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>All My Cases</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="0" column="0">
+            <widget class="QTableView" name="tableView_All_My_Cases"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_Maintain_Employees">
+       <layout class="QGridLayout" name="gridLayout_21">
+        <property name="topMargin">
+         <number>30</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget{
+border-style:none;
+border:2px solid #B2B6B9;
+padding:3px;
+border-radius:5px; }</string>
+          </property>
+          <property name="title">
+           <string>Maintain IT Engineers &amp;&amp; Employees Window</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_33">
+           <property name="topMargin">
+            <number>30</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="title">
+              <string>Maintain IT Engineers</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_22" rowstretch="0">
+              <property name="topMargin">
+               <number>30</number>
+              </property>
+              <property name="bottomMargin">
+               <number>20</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>20</number>
+              </property>
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QWidget" name="widget_8" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_21">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout">
+                     <property name="verticalSpacing">
+                      <number>15</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>15</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_5">
+                       <property name="text">
+                        <string>User Name:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Add_UserName"/>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_6">
+                       <property name="text">
+                        <string>Password:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Add_Password"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_7">
+                       <property name="text">
+                        <string>Login Title:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QComboBox" name="comboBox_Add_LoginTitle">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>Is Active?</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QComboBox" name="comboBox_Add_IsActive">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QPushButton" name="pushButton_Add_User">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>ADD Account</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ResourceFile.qrc">
+                         <normaloff>:/Icon/adduser.png</normaloff>:/Icon/adduser.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_9" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_22">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_2">
+                     <property name="verticalSpacing">
+                      <number>15</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>15</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_9">
+                       <property name="text">
+                        <string>User Name:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>Password:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Delete_Password"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_11">
+                       <property name="text">
+                        <string>Login Title:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_12">
+                       <property name="text">
+                        <string>Is Active?</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QPushButton" name="pushButton_Delete">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Delete Account</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ResourceFile.qrc">
+                         <normaloff>:/Icon/deleteUser.png</normaloff>:/Icon/deleteUser.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="comboBox_Delete_UserName">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Select...</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Delete_LoginTitle"/>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Delete_isActive"/>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_10" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_23">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_3">
+                     <property name="verticalSpacing">
+                      <number>15</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>15</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_13">
+                       <property name="text">
+                        <string>User Name:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_14">
+                       <property name="text">
+                        <string>Password:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Update_Password"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_15">
+                       <property name="text">
+                        <string>Login Title:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QComboBox" name="comboBox_Update_LoginTitle">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_16">
+                       <property name="text">
+                        <string>Is Active?</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QComboBox" name="comboBox_Update_IsActive">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QPushButton" name="pushButton_Update">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Update Account</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ResourceFile.qrc">
+                         <normaloff>:/Icon/modifyUser.png</normaloff>:/Icon/modifyUser.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="comboBox_Update_UserName">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Select...</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_11" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_24">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_4">
+                     <property name="verticalSpacing">
+                      <number>15</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>15</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_17">
+                       <property name="text">
+                        <string>User Name:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_18">
+                       <property name="text">
+                        <string>Password:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Check_Password">
+                       <property name="echoMode">
+                        <enum>QLineEdit::Normal</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_19">
+                       <property name="text">
+                        <string>Login Title:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_20">
+                       <property name="text">
+                        <string>Is Active?</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QPushButton" name="pushButton_Check">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Check Account</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ResourceFile.qrc">
+                         <normaloff>:/Icon/checkUser.png</normaloff>:/Icon/checkUser.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="comboBox_Check_UserName">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Select...</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Check_LoginTitle"/>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Check_isActive"/>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox_7">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Maintain Employees</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_32">
+              <property name="topMargin">
+               <number>30</number>
+              </property>
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QWidget" name="widget_16" native="true">
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_14">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_11">
+                     <property name="verticalSpacing">
+                      <number>15</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>15</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_57">
+                       <property name="text">
+                        <string>User Name:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Add_EmplyeeName"/>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_58">
+                       <property name="text">
+                        <string>Work Number:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Add_WorkNumber"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_59">
+                       <property name="text">
+                        <string>Title:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Add_Title">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_60">
+                       <property name="text">
+                        <string>Level:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Add_Level">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QPushButton" name="pushButton_Maintain_Empoyee_Add_User">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>ADD Account</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ResourceFile.qrc">
+                         <normaloff>:/Icon/adduser.png</normaloff>:/Icon/adduser.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_73">
+                       <property name="text">
+                        <string>Department:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Add_Department">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_17" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_13">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_12">
+                     <property name="verticalSpacing">
+                      <number>15</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>15</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_61">
+                       <property name="text">
+                        <string>User Name:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Delete_UserName">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Select...</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_63">
+                       <property name="text">
+                        <string>Work Number:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Delete_WorkNumber"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_64">
+                       <property name="text">
+                        <string>Title:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_62">
+                       <property name="text">
+                        <string>Level:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_74">
+                       <property name="text">
+                        <string>Department:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QPushButton" name="pushButton_Maintain_Employee_Delete">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Delete Account</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ResourceFile.qrc">
+                         <normaloff>:/Icon/deleteUser.png</normaloff>:/Icon/deleteUser.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Delete_Title"/>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Delete_Level"/>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Delete_Department"/>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_18" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_15">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_13">
+                     <property name="verticalSpacing">
+                      <number>15</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>15</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_65">
+                       <property name="text">
+                        <string>User Name:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Update_UserName">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Select...</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_66">
+                       <property name="text">
+                        <string>Work Number:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Update_WorkNumber"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_67">
+                       <property name="text">
+                        <string>Title:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Update_Title">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_68">
+                       <property name="text">
+                        <string>Level:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Update_Level">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_75">
+                       <property name="text">
+                        <string>Department:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Update_Department">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QPushButton" name="pushButton_Maintain_Empoyee_Update">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Update Account</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ResourceFile.qrc">
+                         <normaloff>:/Icon/modifyUser.png</normaloff>:/Icon/modifyUser.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_19" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_16">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_14">
+                     <property name="verticalSpacing">
+                      <number>15</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>15</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_69">
+                       <property name="text">
+                        <string>User Name:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="comboBox_Maintain_Employee_Checkout_UserName">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Select...</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_70">
+                       <property name="text">
+                        <string>Work Number:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Checkout_WorkNumber"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_71">
+                       <property name="text">
+                        <string>Title:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_72">
+                       <property name="text">
+                        <string>Level:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_76">
+                       <property name="text">
+                        <string>Department:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QPushButton" name="pushButton_Maintain_Employee_Check">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Check Account</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="ResourceFile.qrc">
+                         <normaloff>:/Icon/checkUser.png</normaloff>:/Icon/checkUser.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Checkout_Title"/>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Checkout_Level"/>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLineEdit" name="lineEdit_Maintain_Employee_Checkout_Department"/>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_Department_Level_Title">
+       <property name="styleSheet">
+        <string notr="true">QWidget{
+border-style:none;
+border:2px solid #B2B6B9;
+padding:3px;
+border-radius:5px; }</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_37">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Maintain Window</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_34">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_9">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Maintain Department &amp;&amp; Title &amp;&amp; Level &amp;&amp; Case Type</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_7">
+              <property name="topMargin">
+               <number>30</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QWidget" name="widget_20" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_25">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_15">
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>15</number>
+                   </property>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="lineEdit_Maintain_Others_Add_Department"/>
+                   </item>
+                   <item row="2" column="0" colspan="2">
+                    <widget class="QPushButton" name="pushButton_Maintain_Others_Add_Department">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>ADD DEPARTMENT</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ResourceFile.qrc">
+                       <normaloff>:/Icon/adduser.png</normaloff>:/Icon/adduser.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_77">
+                     <property name="text">
+                      <string>Department Name:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QWidget" name="widget_21" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_26">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_16">
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>15</number>
+                   </property>
+                   <item row="1" column="1">
+                    <widget class="QComboBox" name="comboBox_Maintain_Others_Delete_Department">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Select...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0" colspan="2">
+                    <widget class="QPushButton" name="pushButton_Maintain_Others_Delete_Department">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>DELETE DEPARTMENT</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ResourceFile.qrc">
+                       <normaloff>:/Icon/deleteUser.png</normaloff>:/Icon/deleteUser.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_81">
+                     <property name="text">
+                      <string>Department Name:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QWidget" name="widget_22" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_27">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_17">
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>15</number>
+                   </property>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="lineEdit_Maintain_Others_Add_Title"/>
+                   </item>
+                   <item row="2" column="0" colspan="2">
+                    <widget class="QPushButton" name="pushButton_Maintain_Others_Add_Title">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>ADD TITLE</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ResourceFile.qrc">
+                       <normaloff>:/Icon/modifyUser.png</normaloff>:/Icon/modifyUser.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_86">
+                     <property name="text">
+                      <string>Title Name:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QWidget" name="widget_23" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_18">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_18">
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>15</number>
+                   </property>
+                   <item row="1" column="1">
+                    <widget class="QComboBox" name="comboBox_Maintain_Others_Delete_Title">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Select...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="pushButton_Maintain_Others_Delete_Title">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>DELETE TITLE</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ResourceFile.qrc">
+                       <normaloff>:/Icon/checkUser.png</normaloff>:/Icon/checkUser.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_89">
+                     <property name="text">
+                      <string>Title Name:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QWidget" name="widget_24" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_19">
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>15</number>
+                   </property>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="lineEdit_Maintain_Others_Add_Level"/>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="pushButton__Maintain_Others_Add_Level">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>ADD LEVEL</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ResourceFile.qrc">
+                       <normaloff>:/Icon/adduser.png</normaloff>:/Icon/adduser.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_93">
+                     <property name="text">
+                      <string>Level Name:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QWidget" name="widget_25" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_19">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_20">
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>15</number>
+                   </property>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="pushButton__Maintain_Others_Delete_Level">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>DELETE LEVEL</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ResourceFile.qrc">
+                       <normaloff>:/Icon/deleteUser.png</normaloff>:/Icon/deleteUser.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QComboBox" name="comboBox_Maintain_Others_Delete_Level">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Select...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_98">
+                     <property name="text">
+                      <string>Level Name:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <widget class="QWidget" name="widget_26" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_20">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_21">
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>15</number>
+                   </property>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="lineEdit_Maintain_Others_Add_CaseType"/>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="pushButton__Maintain_Others_Add_CaseType">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>ADD CASE TYPE</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ResourceFile.qrc">
+                       <normaloff>:/Icon/modifyUser.png</normaloff>:/Icon/modifyUser.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_103">
+                     <property name="text">
+                      <string>CASE Type:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="7">
+               <widget class="QWidget" name="widget_27" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_28">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_22">
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>15</number>
+                   </property>
+                   <item row="1" column="1">
+                    <widget class="QComboBox" name="comboBox_Maintain_Others_Delete_CaseType">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Select...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="pushButton__Maintain_Others_Delete_CaseType">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>DELETE CASE TYPE</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="ResourceFile.qrc">
+                       <normaloff>:/Icon/checkUser.png</normaloff>:/Icon/checkUser.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_108">
+                     <property name="text">
+                      <string>CASE Type:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_All_My_OpenHold_Cases">
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+font: 16px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color: rgb(204, 238, 220);
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_19">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>All My Open &amp;&amp; Hold Cases</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_20">
+           <item row="0" column="0">
+            <widget class="QTableView" name="tableView_All_My_OpenHold_Cases"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_All_My_Closed_Cases">
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+font: 16px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color: rgb(204, 238, 220);
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_17">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>All My Closed Cases</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_18">
+           <item row="0" column="0">
+            <widget class="QTableView" name="tableView_All_My_Closed_Cases"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_Case_Details">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_23">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string>Case Details</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_28">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_12">
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_24">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <layout class="QFormLayout" name="formLayout_5">
+                    <property name="verticalSpacing">
+                     <number>15</number>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_21">
+                      <property name="text">
+                       <string>ID Number:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="lineEdit_Details_ID"/>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_22">
+                      <property name="text">
+                       <string>Department:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="label_23">
+                      <property name="text">
+                       <string>Case Type:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="label_24">
+                      <property name="text">
+                       <string>Case Level:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QLabel" name="label_25">
+                      <property name="text">
+                       <string>Case Status:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="lineEdit_Details_Department"/>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QLineEdit" name="lineEdit_Details_CaseType"/>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QLineEdit" name="lineEdit_Details_CaseLevel"/>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QComboBox" name="comboBox_Details_Case_Status">
+                      <property name="font">
+                       <font>
+                        <pointsize>12</pointsize>
+                       </font>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QFormLayout" name="formLayout_6">
+                    <property name="verticalSpacing">
+                     <number>15</number>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_26">
+                      <property name="text">
+                       <string>Employee Name:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_27">
+                      <property name="text">
+                       <string>Create Time:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="label_28">
+                      <property name="text">
+                       <string>Solved Time:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="label_29">
+                      <property name="text">
+                       <string>IT Engineer:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QLabel" name="label_30">
+                      <property name="text">
+                       <string>Handover To:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="lineEdit_Details_EmployeeName"/>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="lineEdit_Details_CreateTime"/>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QLineEdit" name="lineEdit_Details_SolvedTime"/>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QLineEdit" name="lineEdit_Details_ITEngineer"/>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QComboBox" name="comboBox_Details_HandoverTo">
+                      <property name="font">
+                       <font>
+                        <pointsize>12</pointsize>
+                       </font>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Select...</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>138</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="groupBox_13">
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_25">
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <item>
+                   <widget class="QLabel" name="label_31">
+                    <property name="text">
+                     <string>Attachment:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTextEdit" name="textEdit_Details_Attachment">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <item>
+                   <widget class="QLabel" name="label_32">
+                    <property name="text">
+                     <string>Description:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTextEdit" name="textEdit_Details_Description">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="groupBox_14">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Function</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_26">
+              <item row="0" column="0">
+               <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pushButton_Details_Take_Case">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string> Take Case</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="ResourceFile.qrc">
+                  <normaloff>:/Icon/takeuser.png</normaloff>:/Icon/takeuser.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>29</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="pushButton_Details_Updat_Case">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string> Update Case</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="ResourceFile.qrc">
+                  <normaloff>:/Icon/modifyUser.png</normaloff>:/Icon/modifyUser.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <spacer name="verticalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="5" column="0">
+               <widget class="QPushButton" name="pushButton_Details_Handover_Case">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string> Handover Case</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="ResourceFile.qrc">
+                  <normaloff>:/Icon/handoverUser.png</normaloff>:/Icon/handoverUser.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <spacer name="verticalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>29</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="7" column="0">
+               <widget class="QPushButton" name="pushButton_Details_Close_Case">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string> Close Case</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="ResourceFile.qrc">
+                  <normaloff>:/Icon/closeUser.png</normaloff>:/Icon/closeUser.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <spacer name="verticalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>38</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QGroupBox" name="groupBox_15">
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_27">
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout">
+                  <item>
+                   <widget class="QLabel" name="label_33">
+                    <property name="text">
+                     <string>Solution:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTextEdit" name="textEdit_Details_Solution">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_2">
+                  <item>
+                   <widget class="QLabel" name="label_34">
+                    <property name="text">
+                     <string>Remark:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTextEdit" name="textEdit_Details_Remark">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_All_Cases">
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+font: 16px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color: rgb(204, 238, 220);
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_All_Cases">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>All Cases</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="0" column="0">
+            <widget class="QTableView" name="AllCasestableView">
+             <property name="styleSheet">
+              <string notr="true">QHeaderView::section {
+font: 14px &quot;微软雅黑&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color:#cddffe;
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_All_Open_Cases">
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+font: 16px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color:#cddffe;
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_All_Open_Cases">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>All Open Cases</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="0" column="0">
+            <widget class="QTableView" name="tableView_All_Open_Cases">
+             <property name="styleSheet">
+              <string notr="true">QHeaderView::section {
+font: 14px &quot;微软雅黑&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color:#cddffe;
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_All_Hold_Cases">
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+font: 16px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color:#cddffe;
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_All_Hold_Cases">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>All Hold Cases</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="0" column="0">
+            <widget class="QTableView" name="tableView_All_Hold_Cases">
+             <property name="styleSheet">
+              <string notr="true">QHeaderView::section {
+font: 14px &quot;微软雅黑&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color:#cddffe;
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_Cases_By_Engineer">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Filter Cases</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="font">
+                <font>
+                 <family>Microsoft YaHei UI</family>
+                 <pointsize>12</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>IT Engineer:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="comboBox_By_Engineer">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="currentText">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>Select...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>38</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <family>Microsoft YaHei UI</family>
+                 <pointsize>12</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Case Status:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QComboBox" name="comboBox_By_Cases_Status">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="placeholderText">
+                <string>Select...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="5">
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="6">
+              <widget class="QLabel" name="label_3">
+               <property name="font">
+                <font>
+                 <family>Microsoft YaHei UI</family>
+                 <pointsize>12</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Start Date:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="7">
+              <widget class="QDateTimeEdit" name="dateEdit_Start_Date">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="dateTime">
+                <datetime>
+                 <hour>16</hour>
+                 <minute>0</minute>
+                 <second>0</second>
+                 <year>2021</year>
+                 <month>12</month>
+                 <day>23</day>
+                </datetime>
+               </property>
+               <property name="displayFormat">
+                <string>yyyy/MM/dd HH:mm:ss</string>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+               <property name="timeSpec">
+                <enum>Qt::UTC</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="8">
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="9">
+              <widget class="QLabel" name="label_4">
+               <property name="font">
+                <font>
+                 <family>Microsoft YaHei UI</family>
+                 <pointsize>12</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>End Data:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="10">
+              <widget class="QDateTimeEdit" name="dateEdit_End_Date">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="dateTime">
+                <datetime>
+                 <hour>16</hour>
+                 <minute>0</minute>
+                 <second>0</second>
+                 <year>2022</year>
+                 <month>11</month>
+                 <day>2</day>
+                </datetime>
+               </property>
+               <property name="displayFormat">
+                <string>yyyy/MM/dd HH:mm:ss</string>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+               <property name="timeSpec">
+                <enum>Qt::UTC</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="11">
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>38</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="12">
+              <widget class="QPushButton" name="pushButton_Search_Cases">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string> Search</string>
+               </property>
+               <property name="icon">
+                <iconset resource="ResourceFile.qrc">
+                 <normaloff>:/Icon/search2.png</normaloff>:/Icon/search2.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="13">
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>98</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <widget class="QTableView" name="tableView_SearchByEngineer">
+             <property name="styleSheet">
+              <string notr="true">QHeaderView::section {
+font: 16px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color:#cddffe;
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_All_Closed_Cases">
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+font: 16px &quot;Microsoft YaHei UI&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color:#cddffe;
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_All_Closed_Cases">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>All Closed Cases</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0">
+            <widget class="QTableView" name="tableView_All_Closed_Cases">
+             <property name="styleSheet">
+              <string notr="true">QHeaderView::section {
+font: 14px &quot;微软雅黑&quot;;
+font-weight:bold;
+color: rgb(24, 100, 249);
+padding-left: 4px;
+border: 1px solid #e2e2e2;
+background-color:#cddffe;
+}
+ 
+QTableView{
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+border:none;
+color: rgb(116, 116, 116);
+gridline-color:#e2e2e2;
+}
+ 
+QTableView::item::selected{
+background-color:#cddffe;
+color:rgb(164, 158, 255);
+}
+ 
+QTableView QTableCornerButton::section {
+background-color:#cddffe;
+border: 1px solid #e2e2e2;
+}
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1708</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionConnect_Database"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuReport">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Report</string>
+    </property>
+    <addaction name="actionHelpDesk_Support_Report"/>
+    <addaction name="separator"/>
+    <addaction name="actionCase_Stastics"/>
+    <addaction name="separator"/>
+    <addaction name="actionExport_Support"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuDatabase">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Maintain</string>
+    </property>
+    <addaction name="actionMaintain_Employees"/>
+    <addaction name="separator"/>
+    <addaction name="actionMaintain_Department_Level_Title"/>
+    <addaction name="separator"/>
+    <addaction name="actionDatabase_Backup"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+    <addaction name="separator"/>
+    <addaction name="actionPavoGroup"/>
+    <addaction name="separator"/>
+    <addaction name="actionCheck_Upgrade"/>
+    <addaction name="separator"/>
+    <addaction name="actionDonate_to_support_Super_Helpdesk"/>
+   </widget>
+   <widget class="QMenu" name="menuCases_Center">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Cases Center</string>
+    </property>
+    <addaction name="actionMonitor_Window"/>
+    <addaction name="separator"/>
+    <addaction name="actionChat_Window"/>
+    <addaction name="separator"/>
+    <addaction name="actionAll_Cases"/>
+    <addaction name="separator"/>
+    <addaction name="actionAll_Open_Cases"/>
+    <addaction name="separator"/>
+    <addaction name="actionAll_Closed_Cases"/>
+    <addaction name="separator"/>
+    <addaction name="actionAll_Hold_Cases"/>
+    <addaction name="separator"/>
+    <addaction name="actionCases_By_Engineer"/>
+    <addaction name="separator"/>
+    <addaction name="actionAll_My_Cases"/>
+    <addaction name="separator"/>
+    <addaction name="actionAll_My_Open_Hold_Cases"/>
+    <addaction name="separator"/>
+    <addaction name="actionAll_My_Closed_Cases"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuKnowledge">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Knowledge</string>
+    </property>
+    <addaction name="actionKnowledge_Library"/>
+    <addaction name="separator"/>
+    <addaction name="actionKnowledge_Library_Settings"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuCases_Center"/>
+   <addaction name="menuReport"/>
+   <addaction name="menuDatabase"/>
+   <addaction name="menuKnowledge"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionMaintain_Employees">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/modifyUser.png</normaloff>:/Icon/modifyUser.png</iconset>
+   </property>
+   <property name="text">
+    <string>Maintain Employees</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/notes.png</normaloff>:/Icon/notes.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/about.png</normaloff>:/Icon/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About Super HelpDesk</string>
+   </property>
+  </action>
+  <action name="actionPavoGroup">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/about.png</normaloff>:/Icon/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About PavoGroup</string>
+   </property>
+  </action>
+  <action name="actionDatabase_Backup">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/database.png</normaloff>:/Icon/database.png</iconset>
+   </property>
+   <property name="text">
+    <string>Database Backup</string>
+   </property>
+  </action>
+  <action name="actionHelpDesk_Support_Report">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/report1.png</normaloff>:/Icon/report1.png</iconset>
+   </property>
+   <property name="text">
+    <string>HelpDesk Support Report</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionCase_Stastics">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/report2.png</normaloff>:/Icon/report2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Case Stastics Report</string>
+   </property>
+  </action>
+  <action name="actionExport_Support">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/report3.png</normaloff>:/Icon/report3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export Support</string>
+   </property>
+  </action>
+  <action name="actionAll_Cases">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/addressbook.png</normaloff>:/Icon/addressbook.png</iconset>
+   </property>
+   <property name="text">
+    <string>All Cases</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAll_Open_Cases">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/search2.png</normaloff>:/Icon/search2.png</iconset>
+   </property>
+   <property name="text">
+    <string>All Open Cases</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAll_Closed_Cases">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/closeUser.png</normaloff>:/Icon/closeUser.png</iconset>
+   </property>
+   <property name="text">
+    <string>All Closed Cases</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAll_Hold_Cases">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/takeuser.png</normaloff>:/Icon/takeuser.png</iconset>
+   </property>
+   <property name="text">
+    <string>All Hold Cases</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionCases_By_Engineer">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/search2.png</normaloff>:/Icon/search2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cases By Engineer</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionMonitor_Window">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/open.png</normaloff>:/Icon/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Monitor Window</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionKnowledge_Library">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/addressbook.png</normaloff>:/Icon/addressbook.png</iconset>
+   </property>
+   <property name="text">
+    <string>Knowledge Library</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionKnowledge_Library_Settings">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/library.png</normaloff>:/Icon/library.png</iconset>
+   </property>
+   <property name="text">
+    <string>Knowledge Library Settings</string>
+   </property>
+  </action>
+  <action name="actionAll_My_Cases">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/checkUser.png</normaloff>:/Icon/checkUser.png</iconset>
+   </property>
+   <property name="text">
+    <string>All My Cases</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAll_My_Open_Hold_Cases">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/search.png</normaloff>:/Icon/search.png</iconset>
+   </property>
+   <property name="text">
+    <string>All My Open &amp;&amp; Hold Cases</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAll_My_Closed_Cases">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/closeUser.png</normaloff>:/Icon/closeUser.png</iconset>
+   </property>
+   <property name="text">
+    <string>All My Closed Cases</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionConnect_Database">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/serviceEarth.png</normaloff>:/Icon/serviceEarth.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect Database</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/btn_close.png</normaloff>:/Icon/btn_close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit System</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionCheck_Upgrade">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/settings2.png</normaloff>:/Icon/settings2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check New Version</string>
+   </property>
+  </action>
+  <action name="actionMonitor_Window_Console">
+   <property name="text">
+    <string>Monitor Window Console</string>
+   </property>
+  </action>
+  <action name="actionChat_Window">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/message.png</normaloff>:/Icon/message.png</iconset>
+   </property>
+   <property name="text">
+    <string>Chat Window</string>
+   </property>
+  </action>
+  <action name="actionMaintain_Department_Level_Title">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/settings.png</normaloff>:/Icon/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Maintain Department&amp;&amp;Level&amp;&amp;Title</string>
+   </property>
+  </action>
+  <action name="actionDonate_to_support_Super_Helpdesk">
+   <property name="icon">
+    <iconset resource="ResourceFile.qrc">
+     <normaloff>:/Icon/about.png</normaloff>:/Icon/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>Donate to support Super Helpdesk</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qchartview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="ResourceFile.qrc"/>
+ </resources>
+ <connections/>
+</ui>
