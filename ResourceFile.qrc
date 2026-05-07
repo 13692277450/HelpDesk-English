@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/Icon"/>
+    <qresource prefix="/">
+        <file>Icon/bird.png</file>
+        <file>Icon/serviceEarth.png</file>
+        <file>Icon/settings.png</file>
+        <file>Icon/settings2.png</file>
+        <file>setting/setting.json</file>
+        <file>Icon/btn_close.png</file>
+        <file>Icon/btn_ok.png</file>
+        <file>Icon/search.png</file>
+        <file>Icon/search2.png</file>
+        <file>Icon/adduser.png</file>
+        <file>Icon/checkUser.png</file>
+        <file>Icon/deleteUser.png</file>
+        <file>Icon/modifyUser.png</file>
+        <file>Icon/closeUser.png</file>
+        <file>Icon/handoverUser.png</file>
+        <file>Icon/takeuser.png</file>
+        <file>Icon/password.png</file>
+        <file>Icon/user.png</file>
+        <file>Icon/addressbook.png</file>
+        <file>Icon/notes.png</file>
+        <file>Icon/open.png</file>
+        <file>Icon/database.png</file>
+        <file>Icon/library.png</file>
+        <file>Icon/about.png</file>
+        <file>Icon/report1.png</file>
+        <file>Icon/report2.png</file>
+        <file>Icon/report3.png</file>
+        <file>Icon/bird12.png</file>
+        <file>Icon/message.png</file>
+        <file>Icon/sendmessage.png</file>
+        <file>Icon/alipay.jpg</file>
+        <file>Icon/getpay.png</file>
+        <file>Icon/bird2.png</file>
+        <file>Icon/bird2.ico</file>
+    </qresource>
+</RCC>

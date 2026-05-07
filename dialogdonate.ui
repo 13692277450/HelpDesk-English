@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogDonate</class>
+ <widget class="QDialog" name="DialogDonate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>469</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DONATE</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget::ManagerWindow
+{
+font-family:  &quot;Microsoft YaHei UI&quot;;
+font:12pt;
+font-size: 12pt;
+}
+QLabel
+{
+font-family:  &quot;Microsoft YaHei UI&quot;;
+
+font:10pt;
+font-size:10t;
+}
+
+QLineEdit 
+{
+     border: 1px solid blue;
+     border-radius:5px;
+padding: 1px;
+font-size: 12pt;   
+}
+ 
+ QLineEdit:hover
+{
+	color: rgb(57, 57, 57);
+}
+ 
+
+
+ 
+QPushButton
+{
+  
+    border-style:none;
+border-radius:5px;
+padding:5px;
+color:#000000;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #E1E4E6,stop:1 #CCD3D9);
+	
+	selection-background-color: rgb(111, 111, 111);
+}
+ 
+QPushButton:hover{
+	
+	
+	
+	color: rgb(202, 197, 248);
+	
+	
+	background-color: rgb(99, 99, 99);
+}
+
+QPushButton:pressed{
+	
+	
+	
+	color: rgb(189, 189, 230);
+	background-color: rgb(140, 143, 162);
+}
+
+
+
+QComboBox::drop-down:hover:pressed
+
+{//下拉按钮设置
+
+       subcontrol-position:center right;//按钮位置
+
+  //     image:url(:/qss/image/angle-down.png);
+//按钮图片
+
+}
+
+QComboBox:drop-down
+
+{
+
+       subcontrol-position:center right;
+
+    //   image:url(:/qss/image/angle-down-//l-16.png);
+
+}
+
+QComboBox
+
+{// QComboBox本身属性设置
+
+       border: 1px solid #CCCCCC;
+       border-radius: 5px;
+	   font:12pt;
+	   font-size:12pt;
+
+}
+
+QComboBox::hover
+
+{//鼠标移上去，边框变蓝色
+
+       /* 边框宽度,线条样式,颜色 */ 
+
+    border:1px solid #2080F7;  
+
+    /* 内边框 */ 
+
+    padding:1px 18px 1px 3px; 
+
+    min-width:100px; 
+
+       font:12px; 
+
+}
+
+QComboBox QAbstractItemView
+
+{//下拉列表中的选项设置
+
+      border: 1px solid #2080F7;
+
+      selection-//选中背景色
+
+}
+
+/*水平滚动条*/
+
+QScrollBar:horizontal{
+
+       width:8px; 
+
+       padding-top:0px;
+
+       padding-bottom:0px;
+
+       padding-right:0px;
+
+       padding-left:0px;
+
+       background: #000000;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:horizontal{
+
+       background:#E5E5E5;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       min-height:20px;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:horizontal:normal{
+
+       background:#F5F5F5;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:horizontal:hover{
+
+       background:#E6E6E6;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:horizontal:pressed{
+
+       background:#CCCCCC;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}   
+
+ 
+
+ 
+
+QScrollBar滚动条属性设置
+
+/*垂直滚动条*/
+
+ 
+
+QScrollBar:vertical
+
+{
+
+       width:8px;  //宽度
+
+       padding-top:4px; //内上边距设置
+
+       padding-bottom:0px;
+
+       padding-right:0px;
+
+       padding-left:0px;
+
+       background: #000000;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:vertical{ //滑块属性设置
+
+       background:#E5E5E5;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       min-height:20px;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:vertical:normal{
+
+       background:#F5F5F5;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar::handle:vertical:hover{
+
+       background:#E6E6E6;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar:handle:vertical:pressed{
+
+       background:#CCCCCC;
+
+       width:8px;
+
+       border: 0px solid #E5E5E5;
+
+       border-radius:100px;
+
+}
+
+QScrollBar{
+
+background: #000000;
+
+}
+
+QScrollBar:pressed
+
+{
+
+       background: #000000;
+
+}
+
+TableWidget#tableWidget:Item
+
+{
+
+       border:0px solid #E5E5E5;
+
+       border-bottom:1px solid #E5E5E5;
+
+       font-size: 12px;
+
+       color: #4C4C4C;
+
+       font - family: Microsoft YaHei;
+
+       alternate- /*行交替颜色*/ 
+
+    selection-background-color: #E9F2FE; /*选中行背景颜色*/
+
+}
+
+QTableWidget#tableWidget:Item:selected
+
+{
+
+       background:#4C99F8;
+
+}
+
+
+QHeaderView:section{
+
+       font-size: 12px;
+
+       color: #000000;
+
+       font - family: Microsoft YaHei;
+
+       font-weight: bold;
+
+       height:36px;/*表头高度*/
+
+       border-style: flat;
+
+      
+
+       border-bottom:1px solid #E5E5E5;
+
+       border-top:0px solid #E5E5E5;
+
+       alignment: left;//左对齐
+
+}
+
+QMenu:separator {
+    height: 1px;
+    background: rgb(227, 227, 227);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+QPlainTextEdit{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}
+QTableView{
+border-style:none;
+border:3px solid #B2B6B9;
+padding:5px;
+border-radius:5px;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="ResourceFile.qrc">:/Icon/getpay.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="ResourceFile.qrc">:/Icon/alipay.jpg</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Thank you support PavoGroup software! Pls visit www.pavogroup.top to get more free software.</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>223</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>OK</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>223</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="ResourceFile.qrc"/>
+ </resources>
+ <connections/>
+</ui>
